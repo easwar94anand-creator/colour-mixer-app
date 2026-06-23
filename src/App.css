@@ -1,0 +1,2 @@
+/* App-level resets — component styles live in their own CSS files */
+* { box-sizing: border-box; }

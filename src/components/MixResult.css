@@ -1,0 +1,92 @@
+.mix-result {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  flex: 1;
+  min-width: 0;
+}
+
+.mix-result__swatch {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--spacing-m);
+}
+
+.mix-result__swatch-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.mix-result__swatch-label {
+  position: relative;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+}
+
+.mix-result__values {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-s);
+  overflow: hidden;
+}
+
+.mix-result__row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  padding: var(--spacing-s) var(--spacing-m);
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.15s;
+}
+
+.mix-result__row:last-child { border-bottom: none; }
+.mix-result__row:hover { background: rgba(255,255,255,0.08); }
+
+.mix-result__key {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-content-tertiary);
+  width: 2.5rem;
+  flex-shrink: 0;
+}
+
+.mix-result__value {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8125rem;
+  color: var(--color-content-inverted);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxs);
+  border-radius: var(--radius-xs);
+  color: var(--color-content-tertiary);
+  transition: color 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.copy-btn:hover { color: var(--color-content-inverted); background: rgba(255,255,255,0.1); }

@@ -1,0 +1,130 @@
+.feature-section {
+  position: relative;
+  background: var(--color-surface-light);
+  padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 5rem);
+  overflow: hidden;
+}
+
+.feature-section__sketch {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.feature-section__content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.feature-section__header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  max-width: 560px;
+}
+
+.feature-section__eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+.feature-section__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: 700;
+  color: var(--color-content-primary);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.feature-section__title em {
+  font-style: italic;
+  color: var(--color-content-secondary);
+}
+
+.feature-section__lead {
+  font-size: 1.0625rem;
+  color: var(--color-content-secondary);
+  line-height: 1.65;
+  max-width: 460px;
+}
+
+.feature-section__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-xl);
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
+  padding: var(--spacing-xxl);
+  background: var(--color-surface-neutral);
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--radius-l);
+  box-shadow: var(--shadow-m);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-l);
+}
+
+.feature-card__icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-m);
+  background: var(--color-surface-dim);
+  color: var(--color-content-secondary);
+  flex-shrink: 0;
+}
+
+.feature-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-content-primary);
+  letter-spacing: -0.01em;
+}
+
+.feature-card__desc {
+  font-size: 0.9375rem;
+  color: var(--color-content-secondary);
+  line-height: 1.6;
+}
+
+.feature-section__formula-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+}
+
+.feature-section__formula-label {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-content-secondary);
+}
+
+@media (max-width: 900px) {
+  .feature-section__cards { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 600px) {
+  .feature-section__cards { grid-template-columns: 1fr; }
+  .feature-card { padding: var(--spacing-xl); }
+}

@@ -1,0 +1,103 @@
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  flex: 1;
+  min-width: 0;
+}
+
+.color-picker__header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-s);
+}
+
+.color-picker__label {
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  font-weight: 600;
+  color: var(--color-content-inverted);
+  letter-spacing: -0.01em;
+}
+
+.color-picker__sublabel {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-content-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.color-picker__swatch-btn {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+  border-radius: var(--radius-m);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.color-picker__swatch-btn:hover {
+  transform: scale(1.015);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+
+.color-picker__swatch-btn:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 3px;
+}
+
+.color-picker__swatch-ripple {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.08);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.color-picker__swatch-btn:hover .color-picker__swatch-ripple { opacity: 1; }
+
+.color-picker__native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.color-picker__hex-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-s);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-s);
+  padding: var(--spacing-s) var(--spacing-m);
+}
+
+.color-picker__hex-label {
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-content-tertiary);
+  flex-shrink: 0;
+}
+
+.color-picker__hex-input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--color-content-inverted);
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  width: 100%;
+  min-width: 0;
+}
+
+.color-picker__hex-input::placeholder { color: var(--color-content-tertiary); }
