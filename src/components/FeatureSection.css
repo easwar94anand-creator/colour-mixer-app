@@ -1,7 +1,7 @@
 .feature-section {
   position: relative;
   background: var(--color-surface-light);
-  padding: clamp(4rem, 8vw, 8rem) clamp(1.5rem, 5vw, 5rem);
+  padding: clamp(5rem, 10vw, 10rem) clamp(1.5rem, 5vw, 5rem);
   overflow: hidden;
 }
 
@@ -38,11 +38,11 @@
 
 .feature-section__title {
   font-family: var(--font-serif);
-  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
   color: var(--color-content-primary);
   line-height: 1.05;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.03em;
 }
 
 .feature-section__title em {
@@ -67,11 +67,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-l);
-  padding: var(--spacing-xxl);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
   background: var(--color-surface-neutral);
   border: 1px solid var(--color-border-tertiary);
   border-radius: var(--radius-l);
-  box-shadow: var(--shadow-m);
+  box-shadow: var(--shadow-l);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

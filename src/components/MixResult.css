@@ -9,7 +9,7 @@
 .mix-result__swatch {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 0.85;
+  aspect-ratio: 4 / 3;
   border-radius: var(--radius-m);
   overflow: hidden;
   transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);

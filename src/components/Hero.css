@@ -1,9 +1,8 @@
 .hero {
   position: relative;
   background: var(--color-surface-inverted);
-  padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 5rem) 0;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 5rem) 0;
   overflow: hidden;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -41,17 +40,19 @@
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
-  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: clamp(2.5rem, 5vw, 4rem);
+  align-items: center;
+  gap: clamp(3rem, 5vw, 5rem);
 }
 
 .hero__text {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: var(--spacing-xl);
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .hero__eyebrow {
@@ -81,10 +82,10 @@
 
 .hero__title {
   font-family: var(--font-serif);
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: clamp(4rem, 10vw, 8.5rem);
   font-weight: 700;
   color: var(--color-content-inverted);
-  line-height: 0.95;
+  line-height: 0.92;
   letter-spacing: -0.03em;
 }
 
@@ -94,10 +95,11 @@
 }
 
 .hero__subtitle {
-  font-size: clamp(0.9375rem, 1.5vw, 1.0625rem);
+  font-size: clamp(0.9375rem, 1.5vw, 1.125rem);
   color: var(--color-content-secondary);
   line-height: 1.65;
   max-width: 420px;
+  text-align: center;
 }
 
 /* Mixer panel */
@@ -105,11 +107,13 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xxl);
-  padding: var(--spacing-xxl);
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-l);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
+  width: 100%;
+  box-shadow: 0 32px 80px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 .hero__pickers {
@@ -141,7 +145,7 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  margin-top: auto;
+  margin-top: clamp(3rem, 5vw, 5rem);
   height: 80px;
   flex-shrink: 0;
 }

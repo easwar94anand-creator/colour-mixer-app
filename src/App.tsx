@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { Interlude } from './components/Interlude';
 import './App.css';
 import { Hero } from './components/Hero';
 import { FeatureSection } from './components/FeatureSection';
@@ -62,6 +63,7 @@ function App() {
         ratio={ratio}
         mode={mode}
       />
+      <Interlude result={result} colorA={colorA} colorB={colorB} />
       <PaletteSection result={result} />
       <Footer />
     </>

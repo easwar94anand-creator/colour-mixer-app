@@ -82,7 +82,7 @@
 .palette-section__swatches {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  gap: var(--spacing-m);
+  gap: var(--spacing-l);
 }
 
 .palette-swatch {
@@ -103,7 +103,7 @@
 .palette-swatch__color {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 2 / 3;
   border-radius: var(--radius-m);
   border: 1px solid rgba(0,0,0,0.08);
   transition: background-color 0.3s;
