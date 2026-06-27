@@ -48,6 +48,21 @@ The hero does **not** use `min-height: 100vh` — height is content-driven. Addi
 
 `verbatimModuleSyntax` is enabled — type-only imports must use `import type { Foo }`, not `import { Foo }`.
 
+## MCP Server (`mcp-server-fastmcp`)
+
+A local MCP server exposing the app's color utilities to Claude. Configured in `.mcp.json` at the project root.
+
+**Tools:**
+- `mix_colors` — blend two colors (name or hex) at a given ratio; modes: `rgb`, `hsl`, `pigment`
+- `get_color_formats` — convert any color to hex, RGB, HSL, and nearest named color
+- `get_color_name` — find the nearest CSS named color for any hex or color name
+
+**Setup notes:**
+- Config lives in `.mcp.json` (not `settings.json`) — Claude Code reads MCP servers from there
+- Uses `node mcp-server-fastmcp/node_modules/tsx/dist/cli.mjs` with absolute paths — `npx tsx` does not work reliably on Windows in the VSCode extension
+- `fastmcp` must be v4+ (v1.x crashes with `@modelcontextprotocol/sdk` ≥ 1.29)
+- After changing `.mcp.json`, reload the VS Code window (`Ctrl+Shift+P` → `Developer: Reload Window`) to reconnect
+
 ## Visual regression workflow
 
 The reference design image is the Ellipsus-style layout the user provided at project start. When making any UI change, follow this loop until the app matches it:

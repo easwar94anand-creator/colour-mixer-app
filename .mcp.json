@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "colour-mixer-fastmcp": {
+      "command": "node",
+      "args": ["c:\\Users\\easwa\\Downloads\\Claude\\Colour Mixer App\\mcp-server-fastmcp\\node_modules\\tsx\\dist\\cli.mjs", "c:\\Users\\easwa\\Downloads\\Claude\\Colour Mixer App\\mcp-server-fastmcp\\src\\index.ts"],
+      "cwd": "c:\\Users\\easwa\\Downloads\\Claude\\Colour Mixer App\\mcp-server-fastmcp"
+    }
+  }
+}
